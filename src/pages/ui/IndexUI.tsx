@@ -71,7 +71,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                           style={{ filter: isBlack ? 'brightness(0) invert(1)' : 'none' }}
                         />
                       </span>
-                      <span className="inline-block align-middle">WATCH SERIES 11</span>
+                      <span style={{ fontSize: '25px', fontWeight: '900' }} className="inline-block align-middle">WATCH SERIES 11</span>
                     </h2>
                   ) : product.title.includes('Pad') ? (
                     <h2 className={`sf-pro-display text-3xl md:text-5xl font-semibold ${textColor} mb-2`}>
@@ -92,7 +92,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                     </h2>
                   )}
                   
-                  <p className={`sf-pro-text text-base md:text-xl ${subtitleColor} max-w-3xl mx-auto font-normal leading-relaxed`}>
+                  <p style={{ fontWeight: '500', letterSpacing: '-1px', fontFamily: ''DM Sans', sans-serif' }} className={`sf-pro-text text-base md:text-xl ${subtitleColor} max-w-3xl mx-auto font-normal leading-relaxed`}>
                     {product.description}
                   </p>
                 </div>
