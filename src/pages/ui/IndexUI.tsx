@@ -87,12 +87,13 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                       </span>
                     </h2>
                   ) : (
-                    <h2 className={`sf-pro-display text-3xl md:text-5xl font-semibold ${textColor} mb-2`}>
+                    <h2 style={{ fontSize: '34px', fontWeight: '800' }} className={`sf-pro-display text-3xl md:text-5xl font-semibold ${textColor} mb-2`}>
                       {product.title}
                     </h2>
                   )}
                   
-                  <p style={{ fontWeight: '500', letterSpacing: '-1px', fontFamily: 'DM Sans, sans-serif' }} className={`sf-pro-text text-base md:text-xl ${subtitleColor} max-w-3xl mx-auto font-normal leading-relaxed`}>
+                  <p style={{ fontWeight: '500', letterSpacing: '-1.5px', fontFamily: ''DM Sans', sans-serif',
+              fontSize: '18px', }} className={`sf-pro-text text-base md:text-xl ${subtitleColor} max-w-3xl mx-auto font-normal leading-relaxed`}>
                     {product.description}
                   </p>
                 </div>
