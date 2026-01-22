@@ -46,113 +46,41 @@ export const EcommerceTemplate = ({
   const { hasCollections, loading: loadingCollections } = useCollections()
 
   const header = (
-    <div className={`py-2 ${headerClassName}`}>
+    <div className={`py-3 ${headerClassName}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <BrandLogoLeft />
 
-          {/* Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <nav className="flex space-x-6">
-              {!loadingCollections && hasCollections && (
-                <ScrollLink 
-                  to="/#collections" 
-                  className="text-foreground/70 hover:text-foreground transition-colors"
-                >
-                  Colecciones
-                </ScrollLink>
-              )}
-              <ScrollLink 
-                to="/#products" 
-                className="text-foreground/70 hover:text-foreground transition-colors"
-              >
-                Productos
-              </ScrollLink>
-              <Link 
-                to="/blog" 
-                className="text-foreground/70 hover:text-foreground transition-colors"
-              >
-                Blog
-              </Link>
-            </nav>
-          </div>
-
-          {/* Profile & Cart */}
-          <div className="flex items-center space-x-2">
-            <ProfileMenu />
-            
+          {/* Right Icons - Apple Style */}
+          <div className="flex items-center space-x-4">
             {showCart && (
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={openCart}
-                className="relative"
+                className="relative hover:bg-transparent"
                 aria-label="Ver carrito"
               >
                 <ShoppingCart className="h-5 w-5" />
                 {totalItems > 0 && (
-                  <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
-                    {totalItems > 99 ? '99+' : totalItems}
+                  <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center">
+                    {totalItems > 9 ? '9+' : totalItems}
                   </span>
                 )}
               </Button>
             )}
           </div>
         </div>
-
-        {/* Page Title */}
-        {pageTitle && (
-          <div className="mt-6">
-            <h1 className="text-3xl font-bold text-foreground">
-              {pageTitle}
-            </h1>
-          </div>
-        )}
       </div>
     </div>
   )
 
   const footer = (
-    <div className={`bg-black text-white py-12 ${footerClassName}`}>
+    <div className={`bg-[#f5f5f7] text-[#1d1d1f] py-8 ${footerClassName}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Brand */}
-          <div>
-            <BrandLogoLeft />
-            <p className="mt-4 text-white/70">
-              Tu tienda online de confianza
-            </p>
-          </div>
-
-          {/* Links */}
-          <div>
-            <h3 className="font-semibold mb-4 text-white">Enlaces</h3>
-            <div className="space-y-2">
-              <Link 
-                to="/" 
-                className="block text-white/70 hover:text-white transition-colors"
-              >
-                Inicio
-              </Link>
-              <Link 
-                to="/blog" 
-                className="block text-white/70 hover:text-white transition-colors"
-              >
-                Blog
-              </Link>
-            </div>
-          </div>
-
-          {/* Social Links */}
-          <div>
-            <h3 className="font-semibold mb-4 text-white">Síguenos</h3>
-            <SocialLinks />
-          </div>
-        </div>
-
-        <div className="mt-8 pt-8 border-t border-white/20 text-center text-white/70">
-          <p>&copy; 2025 Tu Tienda. Todos los derechos reservados.</p>
+        <div className="text-center text-sm text-[#6e6e73]">
+          <p>Copyright © 2025 Tu Tienda. Todos los derechos reservados.</p>
         </div>
       </div>
     </div>
@@ -164,7 +92,7 @@ export const EcommerceTemplate = ({
         header={header}
         footer={footer}
         className={className}
-        layout={layout}
+        layout="full-width"
       >
         {children}
       </PageTemplate>

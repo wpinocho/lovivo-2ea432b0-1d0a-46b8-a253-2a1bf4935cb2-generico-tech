@@ -28,11 +28,11 @@ export const PageTemplate = ({
   layout = 'default'
 }: PageTemplateProps) => {
   const layoutClasses = {
-    'default': 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8',
+    'default': 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6',
     'full-width': 'w-full',
-    'sidebar-left': 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-4 gap-8',
-    'sidebar-right': 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-4 gap-8',
-    'centered': 'max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'
+    'sidebar-left': 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 lg:grid-cols-4 gap-8',
+    'sidebar-right': 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 lg:grid-cols-4 gap-8',
+    'centered': 'max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6'
   }
 
   const renderContent = () => {
@@ -78,17 +78,17 @@ export const PageTemplate = ({
   return (
     <div className={cn("min-h-screen bg-background", className)}>
       {header && (
-        <header className="sticky top-0 z-40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
+        <header className="sticky top-0 z-40 bg-white border-b border-gray-200">
           {header}
         </header>
       )}
       
-      <div className="flex-1 py-6">
+      <div className="flex-1">
         {renderContent()}
       </div>
 
       {footer && (
-        <footer className="border-t bg-muted/30">
+        <footer>
           {footer}
         </footer>
       )}

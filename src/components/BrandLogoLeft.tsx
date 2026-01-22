@@ -1,15 +1,10 @@
 export const BrandLogoLeft = () => {
   return (
-    <a href="/" aria-label="Home" className="ml-2 flex items-center">
-      {/* TEMPLATE: Replace /logo.png with your brand logo */}
+    <a href="/" aria-label="Home" className="flex items-center">
       <img 
-        src="/logo.png"
+        src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/temp_1769113778423_38f706ff/1769113778424-zqetvxcwiyb.png"
         alt="Logo"
-        className="h-8 w-auto object-contain" 
-        onError={(e) => {
-          e.currentTarget.style.display = 'none';
-          e.currentTarget.parentElement!.innerHTML = '<span class="text-xl font-bold text-black">YourBrand</span>';
-        }}
+        className="h-10 w-auto object-contain" 
       />
     </a>
   )
