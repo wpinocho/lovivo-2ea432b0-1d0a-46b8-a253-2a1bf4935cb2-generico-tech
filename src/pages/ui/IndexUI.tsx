@@ -61,39 +61,11 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Title Area */}
                 <div className="text-center mb-6">
-                  {product.title.includes('WATCH') ? (
-                    <h2 className={`sf-pro-display text-3xl md:text-5xl font-semibold ${textColor} mb-2`}>
-                      <span className="inline-block align-middle mr-2">
-                        <img 
-                          src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/temp_1769113778423_38f706ff/1769113778424-zqetvxcwiyb.png"
-                          alt=""
-                          className="h-10 md:h-12 w-auto inline-block"
-                          style={{ filter: isBlack ? 'brightness(0) invert(1)' : 'none' }}
-                        />
-                      </span>
-                      <span style={{ fontSize: '25px', fontWeight: '900' }} className="inline-block align-middle">WATCH SERIES 11</span>
-                    </h2>
-                  ) : product.title.includes('Pad') ? (
-                    <h2 className={`sf-pro-display text-3xl md:text-5xl font-semibold ${textColor} mb-2`}>
-                      <span className="inline-block align-middle mr-2">
-                        <img 
-                          src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/temp_1769113778423_38f706ff/1769113778424-zqetvxcwiyb.png"
-                          alt=""
-                          className="h-10 md:h-12 w-auto inline-block"
-                        />
-                      </span>
-                      <span className="inline-block align-middle">
-                        Pad <span className="font-light italic">air</span>
-                      </span>
-                    </h2>
-                  ) : (
-                    <h2 style={{ fontSize: '34px', fontWeight: '800' }} className={`sf-pro-display text-3xl md:text-5xl font-semibold ${textColor} mb-2`}>
-                      {product.title}
-                    </h2>
-                  )}
+                  <h2 style={{ fontSize: '34px', fontWeight: '700', letterSpacing: '-2.5px' }} className={`font-dm-sans ${textColor} mb-2`}>
+                    {product.title}
+                  </h2>
                   
-                  <p style={{ fontWeight: '500', letterSpacing: '-1.5px', fontFamily: 'DM Sans, sans-serif',
-              fontSize: '18px', }} className={`sf-pro-text text-base md:text-xl ${subtitleColor} max-w-3xl mx-auto font-normal leading-relaxed`}>
+                  <p style={{ fontWeight: '600', letterSpacing: '-1.5px', fontSize: '18px' }} className={`font-dm-sans ${subtitleColor} max-w-3xl mx-auto leading-relaxed`}>
                     {product.description}
                   </p>
                 </div>

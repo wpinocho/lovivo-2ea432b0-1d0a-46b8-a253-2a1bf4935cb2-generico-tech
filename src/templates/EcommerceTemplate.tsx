@@ -53,7 +53,7 @@ export const EcommerceTemplate = ({
           <BrandLogoLeft />
 
           {/* Right Icons - Apple Style */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-1">
             <Button
               variant="ghost"
               size="icon"
