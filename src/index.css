@@ -108,6 +108,15 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+
+  /* SF Pro Typography */
+  .sf-pro-display {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  }
+
+  .sf-pro-text {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
   }
 }
