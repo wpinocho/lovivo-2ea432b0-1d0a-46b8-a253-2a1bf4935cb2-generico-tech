@@ -6,7 +6,7 @@ import { FloatingCart } from '@/components/FloatingCart'
 import { ProfileMenu } from '@/components/ProfileMenu'
 import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
-import { ShoppingCart } from 'lucide-react'
+import { Search, ShoppingBag, Menu } from 'lucide-react'
 import { useCartUISafe } from '@/components/CartProvider'
 import { useCart } from '@/contexts/CartContext'
 import { useCollections } from '@/hooks/useCollections'
@@ -46,30 +46,48 @@ export const EcommerceTemplate = ({
   const { hasCollections, loading: loadingCollections } = useCollections()
 
   const header = (
-    <div className={`py-3 ${headerClassName}`}>
+    <div className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-white/80 border-b border-gray-200/50 ${headerClassName}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between h-12">
           {/* Logo */}
           <BrandLogoLeft />
 
           {/* Right Icons - Apple Style */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-6">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="hover:bg-transparent h-10 w-10"
+              aria-label="Buscar"
+            >
+              <Search className="h-5 w-5 text-[#1d1d1f]" />
+            </Button>
+            
             {showCart && (
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={openCart}
-                className="relative hover:bg-transparent"
+                className="relative hover:bg-transparent h-10 w-10"
                 aria-label="Ver carrito"
               >
-                <ShoppingCart className="h-5 w-5" />
+                <ShoppingBag className="h-5 w-5 text-[#1d1d1f]" />
                 {totalItems > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center">
+                  <span className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center">
                     {totalItems > 9 ? '9+' : totalItems}
                   </span>
                 )}
               </Button>
             )}
+
+            <Button
+              variant="ghost"
+              size="icon"
+              className="hover:bg-transparent h-10 w-10"
+              aria-label="Menú"
+            >
+              <Menu className="h-5 w-5 text-[#1d1d1f]" />
+            </Button>
           </div>
         </div>
       </div>
@@ -94,7 +112,10 @@ export const EcommerceTemplate = ({
         className={className}
         layout="full-width"
       >
-        {children}
+        {/* Add top padding to account for fixed header */}
+        <div className="pt-12">
+          {children}
+        </div>
       </PageTemplate>
       
       {showCart && <FloatingCart />}
