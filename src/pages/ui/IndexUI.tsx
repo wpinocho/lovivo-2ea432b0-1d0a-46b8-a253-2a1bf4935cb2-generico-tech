@@ -92,7 +92,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                     </h2>
                   )}
                   
-                  <p style={{ fontWeight: '500', letterSpacing: '-1.5px', fontFamily: ''DM Sans', sans-serif',
+                  <p style={{ fontWeight: '500', letterSpacing: '-1.5px', fontFamily: 'DM Sans, sans-serif',
               fontSize: '18px', }} className={`sf-pro-text text-base md:text-xl ${subtitleColor} max-w-3xl mx-auto font-normal leading-relaxed`}>
                     {product.description}
                   </p>
