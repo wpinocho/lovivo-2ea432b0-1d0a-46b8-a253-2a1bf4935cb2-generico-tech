@@ -53,14 +53,14 @@ export const EcommerceTemplate = ({
           <BrandLogoLeft />
 
           {/* Right Icons - Apple Style */}
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-3">
             <Button
               variant="ghost"
               size="icon"
-              className="hover:bg-transparent h-10 w-10"
+              className="hover:bg-transparent h-9 w-9"
               aria-label="Buscar"
             >
-              <Search className="h-5 w-5 text-[#1d1d1f]" />
+              <Search className="h-[18px] w-[18px] text-[#1d1d1f]" />
             </Button>
             
             {showCart && (
@@ -68,10 +68,10 @@ export const EcommerceTemplate = ({
                 variant="ghost"
                 size="icon"
                 onClick={openCart}
-                className="relative hover:bg-transparent h-10 w-10"
+                className="relative hover:bg-transparent h-9 w-9"
                 aria-label="Ver carrito"
               >
-                <ShoppingBag className="h-5 w-5 text-[#1d1d1f]" />
+                <ShoppingBag className="h-[18px] w-[18px] text-[#1d1d1f]" />
                 {totalItems > 0 && (
                   <span className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center">
                     {totalItems > 9 ? '9+' : totalItems}
@@ -83,10 +83,10 @@ export const EcommerceTemplate = ({
             <Button
               variant="ghost"
               size="icon"
-              className="hover:bg-transparent h-10 w-10"
+              className="hover:bg-transparent h-9 w-9"
               aria-label="Menú"
             >
-              <Menu className="h-5 w-5 text-[#1d1d1f]" />
+              <Menu className="h-[18px] w-[18px] text-[#1d1d1f]" />
             </Button>
           </div>
         </div>

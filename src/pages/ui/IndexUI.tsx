@@ -62,24 +62,24 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                 {/* Title Area */}
                 <div className="text-center mb-6">
                   {product.title.includes('WATCH') ? (
-                    <h2 className={`text-4xl md:text-6xl font-semibold ${textColor} mb-2`}>
+                    <h2 className={`text-3xl md:text-5xl font-semibold ${textColor} mb-2`}>
                       <span className="inline-block align-middle mr-2">
                         <img 
                           src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/temp_1769113778423_38f706ff/1769113778424-zqetvxcwiyb.png"
                           alt=""
-                          className="h-12 md:h-16 w-auto inline-block"
+                          className="h-10 md:h-12 w-auto inline-block"
                           style={{ filter: isBlack ? 'brightness(0) invert(1)' : 'none' }}
                         />
                       </span>
                       <span className="inline-block align-middle">WATCH SERIES 11</span>
                     </h2>
                   ) : product.title.includes('Pad') ? (
-                    <h2 className={`text-4xl md:text-6xl font-semibold ${textColor} mb-2`}>
+                    <h2 className={`text-3xl md:text-5xl font-semibold ${textColor} mb-2`}>
                       <span className="inline-block align-middle mr-2">
                         <img 
                           src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/temp_1769113778423_38f706ff/1769113778424-zqetvxcwiyb.png"
                           alt=""
-                          className="h-12 md:h-16 w-auto inline-block"
+                          className="h-10 md:h-12 w-auto inline-block"
                         />
                       </span>
                       <span className="inline-block align-middle">
@@ -87,18 +87,18 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                       </span>
                     </h2>
                   ) : (
-                    <h2 className={`text-4xl md:text-6xl font-semibold ${textColor} mb-2`}>
+                    <h2 className={`text-3xl md:text-5xl font-semibold ${textColor} mb-2`}>
                       {product.title}
                     </h2>
                   )}
                   
-                  <p className={`text-lg md:text-2xl ${subtitleColor} max-w-3xl mx-auto`}>
+                  <p className={`text-base md:text-xl ${subtitleColor} max-w-3xl mx-auto font-light`}>
                     {product.description}
                   </p>
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
+                <div className="flex flex-row items-center justify-center gap-4 mb-8">
                   <Link to={`/productos/${product.slug}`}>
                     <Button 
                       size="lg" 
