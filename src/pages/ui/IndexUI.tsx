@@ -100,6 +100,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                       src={product.images?.[0]} 
                       alt={product.title}
                       className="w-full h-auto object-contain"
+                      style={product.title.includes('Pad') ? { marginTop: '-50px', marginBottom: '-50px' } : {}}
                     />
                   </div>
                 </div>
