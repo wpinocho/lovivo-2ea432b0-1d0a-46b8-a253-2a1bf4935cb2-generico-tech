@@ -109,6 +109,21 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             </section>
           );
         })}
+
+        {/* Final Logo Section - Apple Style */}
+        <section className="bg-white w-full py-16 md:py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-center">
+              <div className="w-full max-w-md">
+                <img 
+                  src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/6dcc321d-23d1-4209-9118-efc3fb1a7242/1769127126686-vvij6h41ub.png" 
+                  alt="Logo"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </EcommerceTemplate>
   );
