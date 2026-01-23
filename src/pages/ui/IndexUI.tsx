@@ -178,7 +178,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             <div className="flex items-center justify-center">
               <div className="w-full max-w-lg">
                 <img 
-                  src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/product-images/2ea432b0-1d0a-46b8-a253-2a1bf4935cb2/laptop-blue.jpg" 
+                  src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/6dcc321d-23d1-4209-9118-efc3fb1a7242/1769129045112-m6ns10pua2r.png" 
                   alt="MacBook Air"
                   className="w-full h-auto object-contain"
                 />
