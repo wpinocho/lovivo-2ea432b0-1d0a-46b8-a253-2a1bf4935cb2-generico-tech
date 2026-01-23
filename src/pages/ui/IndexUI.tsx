@@ -96,7 +96,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                 {/* Product Image */}
                 <div className="flex items-center justify-center">
                   <div className="w-full max-w-2xl">
-                    <img 
+                    <img style={{ letterSpacing: '0px', paddingTop: '-19px', paddingBottom: '-7px', marginTop: '-75px', marginBottom: '-83px' }} 
                       src={product.images?.[0]} 
                       alt={product.title}
                       className="w-full h-auto object-contain"
