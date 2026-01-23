@@ -46,7 +46,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
   return (
     <EcommerceTemplate showCart={true}>
       {/* Hero Sections - Apple Style */}
-      <div className="w-full">
+      <div className="w-full overflow-x-hidden">
         {products.map((product, index) => {
           if (!product) return null;
           
@@ -57,8 +57,8 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
           const subtitleColor = isBlack ? 'text-gray-300' : 'text-[#6e6e73]';
 
           return (
-            <section key={product.id} className={`${bgClass} w-full py-12 md:py-16`}>
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section key={product.id} className={`${bgClass} w-full py-12 md:py-16 overflow-x-hidden`}>
+              <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
                 {/* Title Area */}
                 <div className="text-center mb-6">
                   <h2 style={{ fontSize: '34px', fontWeight: '700', letterSpacing: '-2.5px' }} className={`font-dm-sans ${textColor} mb-2`}>
@@ -71,11 +71,11 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-row items-center justify-center gap-4 mb-8">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8 px-4">
                   <Link to={`/productos/${product.slug}`}>
                     <Button 
                       size="lg" 
-                      className="bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-full px-6 font-normal"
+                      className="bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-full px-6 font-normal w-full sm:w-auto"
                     >
                       Más información
                     </Button>
@@ -84,7 +84,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                     <Button 
                       variant="outline" 
                       size="lg"
-                      className={`rounded-full px-6 font-normal ${
+                      className={`rounded-full px-6 font-normal w-full sm:w-auto ${
                         isBlack 
                           ? 'border-[#0071e3] text-[#0071e3] hover:bg-[#0071e3] hover:text-white' 
                           : 'border-[#0071e3] text-[#0071e3] hover:bg-[#0071e3] hover:text-white'
@@ -111,8 +111,8 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
         })}
 
         {/* Fitness+ Section */}
-        <section className="bg-[#f5f5f7] w-full py-12 md:py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#f5f5f7] w-full py-12 md:py-16 overflow-x-hidden">
+          <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
               <h2 style={{ fontSize: '34px', fontWeight: '700', letterSpacing: '-2.5px' }} className="font-dm-sans text-[#1d1d1f] mb-2">
                 Fitness+
@@ -125,17 +125,17 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               </p>
             </div>
 
-            <div className="flex flex-row items-center justify-center gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8 px-4">
               <Button 
                 size="lg" 
-                className="bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-full px-6 font-normal"
+                className="bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-full px-6 font-normal w-full sm:w-auto"
               >
                 Más información
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="rounded-full px-6 font-normal border-[#0071e3] text-[#0071e3] hover:bg-[#0071e3] hover:text-white"
+                className="rounded-full px-6 font-normal border-[#0071e3] text-[#0071e3] hover:bg-[#0071e3] hover:text-white w-full sm:w-auto"
               >
                 Pruébalo gratis
               </Button>
@@ -154,8 +154,8 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
         </section>
 
         {/* MacBook Air Section */}
-        <section className="bg-[#d6ebf5] w-full py-12 md:py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="bg-[#d6ebf5] w-full py-12 md:py-16 overflow-x-hidden">
+          <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
               <h2 style={{ fontSize: '34px', fontWeight: '700', letterSpacing: '-2.5px' }} className="font-dm-sans text-[#1d1d1f] mb-2">
                 MacBook Air
@@ -165,17 +165,17 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               </p>
             </div>
 
-            <div className="flex flex-row items-center justify-center gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8 px-4">
               <Button 
                 size="lg" 
-                className="bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-full px-6 font-normal"
+                className="bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-full px-6 font-normal w-full sm:w-auto"
               >
                 Más información
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="rounded-full px-6 font-normal border-[#0071e3] text-[#0071e3] hover:bg-[#0071e3] hover:text-white"
+                className="rounded-full px-6 font-normal border-[#0071e3] text-[#0071e3] hover:bg-[#0071e3] hover:text-white w-full sm:w-auto"
               >
                 Comprar
               </Button>
@@ -194,8 +194,8 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
         </section>
 
         {/* iPad Pro Section */}
-        <section className="bg-black w-full py-12 md:py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="bg-black w-full py-12 md:py-16 overflow-x-hidden">
+          <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
               <h2 style={{ fontSize: '34px', fontWeight: '700', letterSpacing: '-2.5px' }} className="font-dm-sans text-white mb-2">
                 iPad Pro
@@ -205,17 +205,17 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               </p>
             </div>
 
-            <div className="flex flex-row items-center justify-center gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8 px-4">
               <Button 
                 size="lg" 
-                className="bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-full px-6 font-normal"
+                className="bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-full px-6 font-normal w-full sm:w-auto"
               >
                 Más información
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="rounded-full px-6 font-normal border-[#0071e3] text-[#0071e3] hover:bg-[#0071e3] hover:text-white"
+                className="rounded-full px-6 font-normal border-[#0071e3] text-[#0071e3] hover:bg-[#0071e3] hover:text-white w-full sm:w-auto"
               >
                 Comprar
               </Button>
