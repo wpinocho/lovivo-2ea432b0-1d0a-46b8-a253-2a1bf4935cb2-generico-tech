@@ -71,11 +71,10 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8 px-4">
+                <div className="flex flex-row items-center justify-center gap-2 mb-8 px-2">
                   <Link to={`/productos/${product.slug}`}>
                     <Button 
-                      size="lg" 
-                      className="bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-full px-6 font-normal w-full sm:w-auto"
+                      className="bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-full px-4 py-2 font-normal text-sm h-9"
                     >
                       Más información
                     </Button>
@@ -83,8 +82,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
                   <Link to={`/productos/${product.slug}`}>
                     <Button 
                       variant="outline" 
-                      size="lg"
-                      className={`rounded-full px-6 font-normal w-full sm:w-auto ${
+                      className={`rounded-full px-4 py-2 font-normal text-sm h-9 ${
                         isBlack 
                           ? 'border-[#0071e3] text-[#0071e3] hover:bg-[#0071e3] hover:text-white' 
                           : 'border-[#0071e3] text-[#0071e3] hover:bg-[#0071e3] hover:text-white'
@@ -125,17 +123,15 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8 px-4">
+            <div className="flex flex-row items-center justify-center gap-2 mb-8 px-2">
               <Button 
-                size="lg" 
-                className="bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-full px-6 font-normal w-full sm:w-auto"
+                className="bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-full px-4 py-2 font-normal text-sm h-9"
               >
                 Más información
               </Button>
               <Button 
                 variant="outline" 
-                size="lg"
-                className="rounded-full px-6 font-normal border-[#0071e3] text-[#0071e3] hover:bg-[#0071e3] hover:text-white w-full sm:w-auto"
+                className="rounded-full px-4 py-2 font-normal border-[#0071e3] text-[#0071e3] hover:bg-[#0071e3] hover:text-white text-sm h-9"
               >
                 Pruébalo gratis
               </Button>
@@ -165,17 +161,15 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8 px-4">
+            <div className="flex flex-row items-center justify-center gap-2 mb-8 px-2">
               <Button 
-                size="lg" 
-                className="bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-full px-6 font-normal w-full sm:w-auto"
+                className="bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-full px-4 py-2 font-normal text-sm h-9"
               >
                 Más información
               </Button>
               <Button 
                 variant="outline" 
-                size="lg"
-                className="rounded-full px-6 font-normal border-[#0071e3] text-[#0071e3] hover:bg-[#0071e3] hover:text-white w-full sm:w-auto"
+                className="rounded-full px-4 py-2 font-normal border-[#0071e3] text-[#0071e3] hover:bg-[#0071e3] hover:text-white text-sm h-9"
               >
                 Comprar
               </Button>
@@ -205,17 +199,15 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8 px-4">
+            <div className="flex flex-row items-center justify-center gap-2 mb-8 px-2">
               <Button 
-                size="lg" 
-                className="bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-full px-6 font-normal w-full sm:w-auto"
+                className="bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-full px-4 py-2 font-normal text-sm h-9"
               >
                 Más información
               </Button>
               <Button 
                 variant="outline" 
-                size="lg"
-                className="rounded-full px-6 font-normal border-[#0071e3] text-[#0071e3] hover:bg-[#0071e3] hover:text-white w-full sm:w-auto"
+                className="rounded-full px-4 py-2 font-normal border-[#0071e3] text-[#0071e3] hover:bg-[#0071e3] hover:text-white text-sm h-9"
               >
                 Comprar
               </Button>
