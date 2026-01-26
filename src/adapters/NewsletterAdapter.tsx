@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { callEdge } from "@/lib/edge";
 import { STORE_ID } from "@/lib/config";
+import { addEmail } from "@/lib/setup-mails-table";
 
 /**
  * FORBIDDEN ADAPTER - NewsletterAdapter
@@ -75,6 +76,22 @@ export const useNewsletterLogic = () => {
         store_id: STORE_ID,
         ...newsletterData
       });
+
+      // También guardar en la tabla mails (sin bloquear el flujo)
+      try {
+        await addEmail({
+          email: trimmedEmail,
+          first_name: firstName.trim() || undefined,
+          last_name: lastName.trim() || undefined,
+          phone: phone.trim() || undefined,
+          source: 'newsletter',
+          tags: ['newsletter-subscriber'],
+          notes: 'Suscrito desde formulario web'
+        });
+      } catch (mailError) {
+        console.error('Error saving to mails table:', mailError);
+        // No mostramos error al usuario, el email ya se guardó en customers
+      }
 
       setSuccess(true);
       toast({

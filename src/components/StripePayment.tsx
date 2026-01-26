@@ -12,6 +12,7 @@ import { useCart } from "@/contexts/CartContext"
 import { useCheckoutState } from "@/hooks/useCheckoutState"
 import { useSettings } from "@/contexts/SettingsContext"
 import { trackPurchase, tracking } from "@/lib/tracking-utils"
+import { addEmail } from "@/lib/setup-mails-table"
 
 interface StripePaymentProps {
   amountCents: number
@@ -297,6 +298,25 @@ function PaymentForm({
             checkout_token: checkoutToken
           }
         })
+        
+        // Save customer email to mails table (non-blocking)
+        if (email) {
+          try {
+            const nameParts = (name || '').split(' ')
+            await addEmail({
+              email: email,
+              first_name: nameParts[0] || undefined,
+              last_name: nameParts.slice(1).join(' ') || undefined,
+              phone: phone || undefined,
+              source: 'checkout',
+              tags: ['customer', 'purchaser'],
+              notes: `Compra realizada - Order #${orderId}`
+            })
+          } catch (mailError) {
+            console.error('Error saving to mails table:', mailError)
+            // No mostrar error al usuario, no afecta el flujo de compra
+          }
+        }
         
         // Limpiar carrito
         clearCart()
