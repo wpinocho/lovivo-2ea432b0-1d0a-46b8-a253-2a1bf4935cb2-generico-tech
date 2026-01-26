@@ -21,6 +21,7 @@ import ThankYou from "./pages/ThankYou";
 import Cart from "./pages/Cart";
 import MyOrders from "./pages/MyOrders";
 import MailsAdmin from "./pages/MailsAdmin";
+import FundasAdmin from "./pages/FundasAdmin";
 
 const queryClient = new QueryClient();
 
@@ -58,6 +59,7 @@ const App = () => (
                       <Route path="/gracias/:orderId" element={<ThankYou />} />
                       <Route path="/mis-pedidos" element={<MyOrders />} />
                       <Route path="/admin/correos" element={<MailsAdmin />} />
+                      <Route path="/admin/fundas" element={<FundasAdmin />} />
                       <Route path="/blog" element={<Blog />} />
                       <Route path="/blog/:slug" element={<BlogPost />} />
                       {/* Aquí puedes agregar/modificar rutas */}
